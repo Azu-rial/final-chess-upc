@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Play Online</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .online-wrap{
+      padding: 30px;
+      color: white;
+    }
+    .online-card{
+      max-width: 520px;
+      background: rgba(120,70,40,0.35);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 18px;
+      padding: 20px;
+      backdrop-filter: blur(6px);
+    }
+    .btn{
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      background: rgba(255,255,255,0.18);
+      color: white;
+      font-weight: 600;
+      margin-top: 12px;
+    }
+    .msg{
+      margin-top: 12px;
+      min-height: 22px;
+      opacity: 0.95;
+    }
+    a{ color: white; }
+  </style>
+</head>
+
+<body>
+  <!-- Protect page: must be logged in -->
+  <script type="module" src="guard.js"></script>
+
+  <div class="online-wrap">
+    <div class="online-card">
+      <h1>Play Online</h1>
+      <p>Click the button to find another player.</p >
+
+      <button class="btn" id="findMatchBtn">Find Match</button>
+      <div class="msg" id="statusMsg"></div>
+
+      <p style="margin-top:10px;">
+        <a href=" ">← Back</a >
+      </p >
+    </div>
+  </div>
+
+  <script type="module" src="online-match.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Game</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .wrap{ padding: 30px; color: white; }
+    .card{
+      max-width: 700px;
+      background: rgba(120,70,40,0.35);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 18px;
+      padding: 20px;
+      backdrop-filter: blur(6px);
+    }
+    .small{ opacity: 0.9; }
+    a{ color: white; }
+  </style>
+</head>
+<body>
+  <script type="module" src="guard.js"></script>
+
+  <div class="wrap">
+    <div class="card">
+      <h1>Online Game</h1>
+      <p class="small" id="info">Loading game…</p >
+      <p><a href=" ">← Back</a ></p >
+
+      <!-- Next step we will put the chessboard here -->
+       <div id="boardArea" style="margin-top:16px;">
+      <iframe
+    id="chessFrame"
+    src="chess-sal/chess/chess.html"
+    style="width: 520px; height: 520px; border: 0; border-radius: 14px;"
+     ></iframe>
+     </div>
+       
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="online-game.js"></script>
+</body>
+</html>

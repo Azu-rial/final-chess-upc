@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+
+    /* Keep your background image from styles.css if you have it */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* dark overlay */
+  .bg {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0,0,0,0.25);
+  }
+
+  .card {
+    width: 420px;
+    max-width: 95vw;
+    padding: 22px;
+    border-radius: 18px;
+
+    background: rgba(120, 70, 40, 0.35);
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  }
+
+  h2 { margin: 0 0 6px; }
+  p { margin: 0 0 16px; opacity: 0.9; }
+
+  .row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .tab {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.15);
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .tab.active {
+    background: rgba(255,255,255,0.18);
+    border-color: rgba(255,255,255,0.3);
+  }
+
+  form { display: none; }
+  form.active { display: block; }
+
+  label {
+    display: block;
+    margin: 10px 0 6px;
+    font-size: 14px;
+    opacity: 0.95;
+  }
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(0,0,0,0.18);
+    color: #fff;
+    outline: none;
+  }
+
+  button.main, button.google {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  button.main {
+    margin-top: 14px;
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+  }
+
+  button.google {
+    margin-top: 10px;
+    background: rgba(255,255,255,0.24);
+    color: #fff;
+  }
+
+  .msg {
+    margin-top: 10px;
+    min-height: 20px;
+    color: #ffd6d6;
+    font-size: 13px;
+    word-break: break-word;
+  }
+
+  </style>
+</head>
+<body>
+
+  <div class="bg">
+    <div class="card">
+      <h2>Welcome</h2>
+      <p>Login or Sign up to play</p >
+
+      <div class="row">
+        <button id="loginTab" class="tab active" type="button">Login</button>
+        <button id="signupTab" class="tab" type="button">Sign up</button>
+      </div>
+
+      <!-- Login form -->
+      <form id="loginForm" class="active">
+        <label>Email</label>
+        <input id="loginEmail" type="email" required />
+
+        <label>Password</label>
+        <input id="loginPassword" type="password" required />
+
+        <button class="main" type="submit">Login</button>
+        <button class="google" id="googleBtn" type="button">Continue with Google</button>
+
+        <div class="msg" id="loginMsg"></div>
+      </form>
+
+      <!-- Signup form -->
+      <form id="signupForm">
+        <label>Username</label>
+        <input id="signupUsername" type="text" required />
+
+        <label>Email</label>
+        <input id="signupEmail" type="email" required />
+
+        <label>Password</label>
+        <input id="signupPassword" type="password" required />
+
+        <button class="main" type="submit">Create account</button>
+
+        <div class="msg" id="signupMsg"></div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="auth.js"></script>
+</body>
+</html>

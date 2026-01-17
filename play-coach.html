@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play Coach</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <aside class="side-panel">
+
+      <div class="panel-head">
+        <div class="badge">🧑‍🏫</div>
+        <div>
+          <div class="panel-title">Play Coach</div>
+          <div class="panel-subtitle">Pick a training topic</div>
+        </div>
+      </div>
+
+      <button class="panel-item coach-topic" id="openingsBtn" type="button">
+        <div class="icon">📘</div>
+        <div>
+          <strong>Openings</strong>
+          <p>Start strong from move 1</p >
+        </div>
+      </button>
+
+      <button class="panel-item coach-topic" id="endgamesBtn" type="button">
+        <div class="icon">♖</div>
+        <div>
+          <strong>Endgames</strong>
+          <p>Convert winning positions</p >
+        </div>
+      </button>
+
+      <button class="panel-item coach-topic" id="tacticsBtn" type="button">
+        <div class="icon">⚔️</div>
+        <div>
+          <strong>Tactics</strong>
+          <p>Forks, pins, skewers</p >
+        </div>
+      </button>
+
+      <button class="panel-item coach-topic" id="checkmateBtn" type="button">
+        <div class="icon">♟️</div>
+        <div>
+          <strong>Checkmate</strong>
+          <p>Mate patterns & puzzles</p >
+        </div>
+      </button>
+
+      <a class="panel-item" href=" " style="text-decoration:none;">
+        <div class="icon">⬅️</div>
+        <div>
+          <strong>Back</strong>
+          <p>Return to main menu</p >
+        </div>
+      </a >
+
+    </aside>
+
+    <main class="board-area">
+      <div class="coach-card">
+        <h1>Coach Training</h1>
+        <p>Select a topic on the left to begin.</p >
+
+        <div class="selected-box">
+          <div class="selected-title">Selected topic:</div>
+          <div class="selected-value" id="selectedTopic">None</div>
+
+          <button class="start-btn" id="startLessonBtn" type="button" disabled>
+            Start Lesson
+          </button>
+        </div>
+
+        <div class="coach-preview" id="previewBox">
+          <h2>Preview</h2>
+          <p>Pick a topic to see what you’ll learn.</p >
+        </div>
+      </div>
+    </main>
+
+  </div>
+  <script type="module" src="guard.js"></script>
+
+  <script src="coach.js"></script>
+</body>
+</html>

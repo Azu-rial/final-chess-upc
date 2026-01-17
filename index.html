@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chess Side Panel</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- SIDE PANEL -->
+    <aside class="side-panel">
+
+      <div class="panel-head">
+        <div class="badge">♟</div>
+        <div>
+          <div class="panel-title">Play Chess</div>
+          <div class="panel-subtitle">Choose a mode to start playing</div>
+        </div>
+      </div>
+
+      <!-- ✅ PLAY ONLINE → EXTERNAL WEBSITE -->
+      <a
+        class="panel-item"
+        href="https://filipposcaramuzza.dev/online-chess/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="icon">⚡</div>
+        <div>
+          <strong>Play Online</strong>
+          <p>Play vs a person of similar skill</p>
+        </div>
+      </a>
+
+      <!-- LOCAL / FUTURE MODES -->
+      <a class="panel-item" href="play-bots.html">
+        <div class="icon">🤖</div>
+        <div>
+          <strong>Play Bots</strong>
+          <p>Challenge a bot from Easy to Master</p>
+        </div>
+      </a>
+
+      <a class="panel-item" href="play-coach.html">
+        <div class="icon">🧑‍🏫</div>
+        <div>
+          <strong>Play Coach</strong>
+          <p>Learn as you play</p>
+        </div>
+      </a>
+
+      <a class="panel-item" href="play-friend.html">
+        <div class="icon">🤝</div>
+        <div>
+          <strong>Play a Friend</strong>
+          <p>Invite a friend</p>
+        </div>
+      </a>
+
+      <button id="logoutBtn" class="menu-btn logout-btn">Logout</button>
+
+    </aside>
+
+    <!-- BOARD AREA (YOUR LOCAL ONE) -->
+    <main class="board-placeholder">
+      <iframe
+        class="board-frame"
+        src="./chess-sal/chess/chess.html"
+        frameborder="0"
+      ></iframe>
+    </main>
+
+  </div>
+
+  <script type="module" src="logout.js"></script>
+  <script type="module" src="guard.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play Bots</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- LEFT PANEL (same style) -->
+    <aside class="side-panel">
+
+      <div class="panel-head">
+        <div class="badge">🤖</div>
+        <div>
+          <div class="panel-title">Play Bots</div>
+          <div class="panel-subtitle">Choose a bot difficulty</div>
+        </div>
+      </div>
+
+      <!-- Difficulty options -->
+      <button class="panel-item" id="easyBtn" type="button">
+        <div class="icon">🙂</div>
+        <div>
+          <strong>Easy</strong>
+          <p>Good for beginners</p >
+        </div>
+      </button>
+
+      <button class="panel-item" id="mediumBtn" type="button">
+        <div class="icon">😄</div>
+        <div>
+          <strong>Medium</strong>
+          <p>For improving players</p >
+        </div>
+      </button>
+
+      <button class="panel-item" id="hardBtn" type="button">
+        <div class="icon">😈</div>
+        <div>
+          <strong>Hard</strong>
+          <p>Will punish mistakes</p >
+        </div>
+      </button>
+
+      <button class="panel-item" id="masterBtn" type="button">
+        <div class="icon">🏆</div>
+        <div>
+          <strong>Master</strong>
+          <p>Strong bot challenge</p >
+        </div>
+      </button>
+
+      <!-- Back button -->
+      <a class="panel-item" href=" " style="text-decoration:none;">
+        <div class="icon">⬅️</div>
+        <div>
+          <strong>Back</strong>
+          <p>Return to main menu</p >
+        </div>
+      </a >
+
+    </aside>
+
+    <!-- RIGHT SIDE (content area) -->
+    <main class="board-area">
+  <div class="bots-card">
+    <h1>Bots</h1>
+    <p>Select a difficulty on the left to start.</p >
+
+    <div class="selected-box">
+      <div class="selected-title">Selected:</div>
+      <div class="selected-value" id="selectedDifficulty">None</div>
+
+      <button class="start-btn" id="startBotGameBtn" type="button" disabled>
+        Start Game
+      </button>
+    </div>
+  </div>
+</main>
+<script type="module" src="guard.js"></script>
+<script src="bots.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play a Friend</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Left panel -->
+    <aside class="side-panel">
+
+      <div class="panel-head">
+        <div class="badge">🤝</div>
+        <div>
+          <div class="panel-title">Play a Friend</div>
+          <div class="panel-subtitle">Create or join a private game</div>
+        </div>
+      </div>
+
+      <a class="panel-item" href=" " style="text-decoration:none;">
+        <div class="icon">⬅️</div>
+        <div>
+          <strong>Back</strong>
+          <p>Return to main menu</p >
+        </div>
+      </a >
+
+    </aside>
+
+    <!-- Right content -->
+    <main class="board-area">
+      <div class="friend-card">
+        <h1>Private Game</h1>
+        <p>Create a code to share, or join using your friend’s code.</p >
+
+        <div class="friend-grid">
+
+          <!-- Create -->
+          <div class="friend-tile">
+            <h2>Create Game</h2>
+            <p>Generate a room code and share it.</p >
+
+            <div class="code-row">
+              <input id="roomCode" class="code-input" type="text" value="------" readonly />
+              <button id="copyCodeBtn" class="small-btn" type="button">Copy</button>
+            </div>
+
+            <button id="createCodeBtn" class="start-btn" type="button">
+              Generate Code
+            </button>
+          </div>
+
+          <!-- Join -->
+          <div class="friend-tile">
+            <h2>Join Game</h2>
+            <p>Enter a room code your friend sent you.</p >
+
+            <input id="joinCodeInput" class="text-input" type="text" placeholder="Enter code e.g. A7K9Q2" />
+            <button id="joinGameBtn" class="start-btn" type="button" disabled>
+              Join
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+  </div>
+  <script type="module" src="guard.js"></script>
+
+  <script src="friend.js"></script>
+</body>
+</html>
